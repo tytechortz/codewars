@@ -3,7 +3,7 @@ def find_even_index(arr):
     answer = 0
     while(i <= len(arr)):
         if sum(arr[:i+1]) == sum(arr[i:]):
-            answer = int(i)
+            answer = i
             break
         else:
             answer = -1
@@ -11,5 +11,4 @@ def find_even_index(arr):
    
     return answer
    
-
 find_even_index([1,2,3,4,3,2,1])
