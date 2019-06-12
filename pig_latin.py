@@ -1,6 +1,23 @@
-def pig_it(text):
-    text = text.split()
-    print(text[0][1:] + text[0][0] + 'ay')
-    print(text)
+from string import punctuation
 
-pig_it('Pig latin is cool')
+def pig_it(text):
+    punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+    y = ''
+    pl = []
+    any(p in text for p in punctuation)
+    for x in text:
+        if x in punctuations:
+            y = x
+            text = text.replace(x, "")
+            text = text.split()
+    
+            for word in range(len(text)):
+                pl.append(text[word][1:] + text[word][0] + 'ay')
+            
+            return " ".join(pl) + " " + y
+    else:
+        text = text.split()
+        for word in range(len(text)):
+            pl.append(text[word][1:] + text[word][0] + 'ay')
+        
+        return " ".join(pl)
