@@ -10,27 +10,29 @@ def order_weight(string):
         first_digit.append(int(numbers[0]))
     print(first_digit)
 
-  
-    
     for n in int_list:
         s = 0
         v = n
+        i = int_list.index(n)
         # first_digit = n[0] 
         while n:
             dig = n % 10
             s += dig
             n = n//10
     
-        arranged_list.append((s,v))
+        arranged_list.append((s,v,first_digit[i]))
         print(arranged_list)
+       
 
     # for numbers in string:
     #     arranged_list.append()
     
-    arranged_list = sorted(arranged_list, key=lambda x: (x[0], -x[1]))
+    arranged_list = sorted(arranged_list, key=lambda x: (x[0], x[2]))
 
     for l in range(len(arranged_list)):
         answer.append(arranged_list[l][1])
+
+  
     
     mystring = " ".join(map(str,answer))
     print(mystring)
