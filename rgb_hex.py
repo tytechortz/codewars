@@ -11,17 +11,8 @@ def rgb(r, g, b):
     for i in oor_values:
         result.append('{}{}'.format(hex_dict[int(i/16)], hex_dict[i%16]))
 
+    print("".join(result))
+    return "".join(result)
 
-    # result = [str(int(i/16)) + str((i % 16) if int(i/16)<10 else hex_dict[int(i/16)] \
-    # + str((i % 16) if int(i/16)<10 else hex_dict[i % 16]) for i in oor_values]
-            
-
-
-
-        # result.append("{0:0=2d}".format(int(i/16)))
-
-    print(result) 
-
-# def hex_conv(s):
 
 rgb(-20,275,125)
