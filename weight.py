@@ -4,25 +4,25 @@ def order_weight(string):
     mystring = ''
     answer = []
     arranged_list = []
-    print(string)
     string = string.split()
-    print(string)
     string = [int(i) for i in string]
-    print(string)
     # print(len(string[0]))
     for n in string:
         s = 0
         v = n
+        i = string.index(n)
         while n:
             dig = n % 10
             s += dig
             n = n//10
         # print(s)
-        arranged_list.append((s,v))
+        arranged_list.append((s,v,i))
        
         print(arranged_list)
+    def sortSecond(val):
+        return val[0]
 
-    arranged_list.sort()
+    arranged_list.sort(key = sortSecond)
     # print(arranged_list)
     # print(arranged_list[0])
     for l in range(len(arranged_list)):
