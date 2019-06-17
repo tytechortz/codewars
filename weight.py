@@ -1,40 +1,16 @@
-def order_weight(string):
-    mystring = ''
-    answer = []
-    arranged_list = []
-    first_digit = []
-    string = string.split()
-    int_list = [int(i) for i in string]
+def sum_string(s):
+    sum = 0
+    for digit in s:
+        sum += int(digit)
+    print(sum)
+    return sum
 
-    for numbers in string:
-        first_digit.append(int(numbers[0]))
-    print(first_digit)
-
-    for n in int_list:
-        s = 0
-        v = n
-        i = int_list.index(n)
-        # first_digit = n[0] 
-        while n:
-            dig = n % 10
-            s += dig
-            n = n//10
-    
-        arranged_list.append((s,v,first_digit[i]))
-        print(arranged_list)
-       
-
-    # for numbers in string:
-    #     arranged_list.append()
-    
-    arranged_list = sorted(arranged_list, key=lambda x: (x[0], x[2]))
-
-    for l in range(len(arranged_list)):
-        answer.append(arranged_list[l][1])
-
-  
-    
-    mystring = " ".join(map(str,answer))
-    print(mystring)
+def order_weight(strng):
+    # your code
+    initial_list = sorted(strng.split())
+    print(initial_list)
+    result = " ".join(sorted(initial_list, key=sum_string))
+    print(result)
+    return result
    
 order_weight("2000 10003 1234000 44444444 9999 11 11 22 123")
