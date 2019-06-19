@@ -21,7 +21,7 @@ def closest(strng):
             s += dig
             n = n//10
 
-        totals.append((s,i))
+        totals.append([s,i])
 
     print(totals)
     
