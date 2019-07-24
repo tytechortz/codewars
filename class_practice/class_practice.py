@@ -1,30 +1,18 @@
 import matplotlib.pyplot as plt
+import simple_module1 as rg 
 
-class Rocket():
-    def __init__(self, x=0, y=0):
-        self.x = x
-        self.y = y
-
-    def move_up(self):
-        self.y += 1
-
-    def move_down(self):
-        self.y -= 1
-
-    def move_right(self):
-        self.x += 1
-
-    def move_left(self):
-        self.x -= 1
-
+#make series of rockets
 rockets=[]
-rockets.append(Rocket())
-rockets.append(Rocket(0,2))
-rockets.append(Rocket(1,4))
-rockets.append(Rocket(2,6))
-rockets.append(Rocket(3,7))
-rockets.append(Rocket(5,9))
-rockets.append(Rocket(8,15))  
+rockets.append(rg.Rocket())
+rockets.append(rg.Rocket(0,2))
+rockets.append(rg.Rocket(1,4))
+rockets.append(rg.Rocket(2,6))
+rockets.append(rg.Rocket(3,7))
+rockets.append(rg.Rocket(5,9))
+rockets.append(rg.Rocket(8,15))  
+
+
+#show where each rocket is
 
 for index, rocket in enumerate(rockets):
   #original position of rockets
