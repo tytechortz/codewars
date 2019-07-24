@@ -17,16 +17,17 @@ rockets.append(rg.Rocket(8,15))
 for index, rocket in enumerate(rockets):
   #original position of rockets
   print("Rocket %d is at (%d, %d)." % (index, rocket.x, rocket.y))
-  plt.plot(rocket.x, rocket.y, 'ro', linewidth=2, linestyle='dashed', markersize=12)
+  plt.plot(rocket.x, rocket.y, 'rs', linewidth=2, linestyle='dashed', markersize=12)
   #move the 'rocket' one up
   rocket.move_up()
   print("New Rocket position %d is at (%d, %d)." % (index, rocket.x, rocket.y))
   #plot the new position
-  plt.plot(rocket.x, rocket.y, 'bo', linewidth=2, linestyle='dashed', markersize=12)
-  #move the rocket left, then plot the new position
+  plt.plot(rocket.x, rocket.y, 'bs', linewidth=2, linestyle='dashed', markersize=12)
+  #move the rocket left
   rocket.move_left()
-  plt.plot(rocket.x, rocket.y, 'yo', linewidth=2, linestyle='dashed', markersize=12)
+  plt.plot(rocket.x, rocket.y, 'ys', linewidth=2, linestyle='dashed', markersize=12)
+
 #show graph legend to match colors with position
+plt.title("Positions from using Module")
 plt.gca().legend(('original position','^ - Moved up', '< - Moved left'))
 plt.show()
-#plt.legend(loc='upper left')
