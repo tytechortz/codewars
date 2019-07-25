@@ -1,15 +1,18 @@
-class Customer():
-    def __init__(self, name, balance=0):
-        self.name = name 
+
+
+
+class Bank_Account:
+    def __init__(self, first_name, last_name, account_num, balance=0):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.account_num = account_num
         self.balance = balance
+        self.transactions = []
+        
+       
 
 
-    def withdrawl(self, x):
-        self.balance - x
 
-c1 = Customer("Bill", 1000)
-
-print(c1.balance)
 
 # class Person():
 #     def __init__(self, name, age):
