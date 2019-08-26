@@ -6,5 +6,8 @@ def div_by_five(num):
     else:
         return False
 
-xyz = (i for i in input_list if div_by_five(i))
-print(list(xyz))
+# xyz = (i for i in input_list if div_by_five(i))
+# print(list(xyz))
+
+xyz = [i for i in input_list if div_by_five(i)]
+print(xyz)
